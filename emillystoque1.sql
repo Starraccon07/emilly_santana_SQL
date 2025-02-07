@@ -46,10 +46,10 @@ CREATE TABLE `cliente` (
 
 INSERT INTO `cliente` (`Cod_cliente`, `Nome_cliente`, `Endereço_cliente`, `Cidade_cliente`, `CEP_cliente`, `UF`, `CNPJ`, `IE`) VALUES
 (20, 'Beth', 'Av Climério n. 45', 'São Paulo', '25679300', 'SP', '3248512673268', 9280),
-(110, 'Jorge', 'Rua Caiapó 13', 'Curitiba', '30078500', 'PR', '1451276498349', 5004),
+(110, 'Jorge', 'Rua Caiapó 13', 'Curitiba', '30078500', 'PR', '1451276498349', 5004,null),
 (130, 'Edmar', 'Rua da Prais s/n', 'Salvador', '30079300', 'BA', '234632842349', 7121),
-(157, 'Paulo', 'Tv. Moraes c/3', 'Londrina', '25679310', 'PR', '328482233242', 1923),
-(180, 'Livio', 'Av. Beira Mar n.1256', 'Florianópolis', '30077500', 'SC', '1273657123474', 9275),
+(157, 'Paulo', 'Tv. Moraes c/3', 'Londrina',null, '25679310', 'PR', '328482233242', 1923),
+(180, 'Livio', 'Av. Beira Mar n.1256', 'Florianópolis', '30077500', 'SC', '1273657123474', 9275,null),
 (222, 'Lúcia', 'Rua Itabira 123 loja 09', 'Belo Horizonte', '22124391', 'MG', '2831521393488', 2985),
 (234, 'José', 'Quadra 3 bl. 3 sl 1003', 'Brasilia', '22841650', 'DF', '2176357612323', 2931),
 (260, 'Susana', 'Rua Lopes Mendes 12', 'Niterói', '30046500', 'RJ', '217635712329', 2530),
