@@ -1,0 +1,50 @@
+DELIMITER //
+CREATE PROCEDURE insertEmpresa(
+    p_Id INT,
+    p_Cnpj VARCHAR(50),
+    p_Email VARCHAR(50),
+    p_Nome VARCHAR(50),
+    p_Endereco VARCHAR(50),
+    p_Telefone VARCHAR(20))
+BEGIN
+IF((p_cnpj!='') && (p_Email!='') && (p_Nome!='') && (p_Endereco!='') && (p_Telefone!='')) THEN
+INSERT INTO Empresas
+(Cnpj,Email,Nome,Endereco,Telefone)
+VALUES
+(p_Cnpj,p_Email,p_Nome,p_Endereco,p_Telefone);
+INSERT INTO Enderecos (CNPJ, Endereco)
+VALUES (p_CNPJ, p_Endereco);
+ELSE
+SELECT 'Os dados devem ser fornecidos para o cadastro!'
+AS Msg;
+END IF;
+END
+//
+
+CALL insertEmpresa(
+    '12345678000199',
+    'empresa@exemplo.com',
+    'Loja ABC',
+    'Rua das Flores, 100',
+    '(11) 1234-5678'
+);
+
+BEGIN
+IF((v_nome!='') && (v_cpf!='')) THEN
+INSERT INTO tbl_financeiro
+(financeiro_nome, financeiro_cpf)
+VALUES
+(v_nome, v_cpf);
+ELSE
+SELECT 'NOME e CPF devem ser fornecidos para o cadastro!'
+AS Msg;
+END IF;
+END
+
+BEGIN
+if((v_id>0)&&(v_id!='')) THEN
+DELETE FROM tbl_financeiro WHERE financeiro_id=v_id;
+ELSE
+SELECT 'O identificador do registro não foi informado' AS Msg;
+END IF;
+END
